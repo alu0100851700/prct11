@@ -1,16 +1,19 @@
+#encodign: utf-8
 require 'spec_helper'
 require 'biblio_gem'
 
 describe BiblioGem do
-  def setup
-      @bib1 = Bibliography.new("Autor1","Titulo1","Fecha1","ISBN1")
-  end
-
+ 
   it 'has a version number' do
     expect(BiblioGem::VERSION).not_to be nil
   end
 
    describe "Existe un libro" do
+
+      before :each do
+        @bib1 = BiblioGem::Bibliography.new("Autor1","Titulo1","Fecha1","ISBN1")
+      end
+
       it "El nombre del autor es correcto" do
          @bib1.autor.should eq("Autor1")
       end
