@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'biblio_gem.rb'
+require 'biblio_gem'
 
 describe BiblioGem do
   def setup
-      @bib1 = BiblioGem.new("Autor1","Titulo1","Fecha1","ISBN1")
+      @bib1 = Bibliography.new("Autor1","Titulo1","Fecha1","ISBN1")
   end
 
   it 'has a version number' do
