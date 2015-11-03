@@ -63,7 +63,7 @@ describe BiblioGem do
       end
       
       it "Imprimiendo datos 2" do
-         @bib2.to_s.should eq("Autor/es: Autor1, Autor2\n Titulo: Titulo1\n Fecha: Fecha1\n ISBN: ISBN1\n")
+         @bib2.to_s.should eq("Autor/es: Autor1, Autor2\n Titulo: Titulo2\n Fecha: Fecha2\n ISBN: ISBN2\n")
       end
    end
    
