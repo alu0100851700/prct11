@@ -6,16 +6,16 @@ require 'biblio_gem/version'
 Gem::Specification.new do |spec|
   spec.name          = "biblio_gem"
   spec.version       = BiblioGem::VERSION
-  spec.authors       = ["ASP"]
-  spec.email         = ["alu0100769609@ull.edu.es"]
+  spec.authors       = ["Adexe Sabina","David Redondo Durand"]
+  spec.email         = ["alu0100769609@ull.edu.es","alu0100851700@ull.edu.es"]
 
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Gema Bibliográfica.}
+  spec.description   = %q{Gema que permite el almacenamiento de bibliografía.}
+  spec.homepage      = ""
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
