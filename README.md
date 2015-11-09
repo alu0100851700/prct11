@@ -1,8 +1,7 @@
 #Lenguajes y Paradigmas de Programación
-##Práctica6: Desarrollo Dirigido por Pruebas (TDD)
+##Práctica7: Programación Orientada a objetos
 
-### Miembros del Equipo:
-* Adexe Sabina Pérez.
+### Alumno
 * David F. Redondo Durand.
 
 ## Installation
