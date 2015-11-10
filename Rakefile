@@ -5,5 +5,6 @@ task :default => :spec
 desc "Ejecutar las espectativas de la gema BiblioGem"
 task :spec do
   sh "bundle exec rspec spec/biblio_gem_spec.rb"
+  sh "bundle exec rspec spec/node_spec.rb"
   sh "bundle exec rspec spec/list_spec.rb"
 end
