@@ -7,11 +7,21 @@ module BiblioGem
 		end
 
 		def to_s
+			libro = ""
 			if @autor.is_a? Array
-				"Autor/es: #{@autor.join(", ")}\n Titulo: #{@titulo}\n Fecha: #{@fecha}\n ISBN: #{@isbn}\n"
+				libro+="Autor/es: #{@autor.join(", ")}\n"
 			else
-				"Autor/es: #{@autor}\n Titulo: #{@titulo}\n Fecha: #{@fecha}\n ISBN: #{@isbn}\n"
+				libro+="Autor/es: #{@autor}\n"
 			end
+			
+			libro+=" Titulo: #{@titulo}\n Fecha: #{@fecha}\n"
+			
+			if @isbn.is_a? Array
+				libro+=" ISBN: #{@isbn.join(", ")}\n"
+			else
+				libro+=" ISBN: #{@isbn}\n"
+			end
+			libro
 		end
 		
 	end

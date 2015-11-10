@@ -27,6 +27,10 @@ describe BiblioGem::List do
             
             expect(@l.size).to eq(6)
         end
+    end
+    
+    describe "Pruebas Lista" do
         
     end
+    
 end
