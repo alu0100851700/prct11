@@ -9,11 +9,11 @@ describe BiblioGem::List do
         end
         
         it "Debe existir una lista con su cabeza" do
-            expect(@l.head).to be(nil)
+            expect(@l.head).not_to be(nil)
         end
         
         it "Se extrae el primer elemento de la lista" do
-            expect(@l.pop).to be("Dato1")
+            expect(@l.pop).to eq("Dato1")
         end
         
         it "Se puede insertar un elemento" do

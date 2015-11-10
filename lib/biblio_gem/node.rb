@@ -5,7 +5,7 @@ module BiblioGem
         
         def initialize(args)
             @value = args[:value]
-            @next = args[:next]
+            @next = args[:next] 
         end
         
         def to_s
