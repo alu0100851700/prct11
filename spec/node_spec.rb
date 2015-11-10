@@ -10,14 +10,14 @@ describe BiblioGem::Node do
         end
         
         it "El nodo devuelve el valor correcto" do
-            expect(@n1.to_s).to be("ValorNodo1")
-            expect(@n2.to_s).to be("ValorNodo2")
+            expect(@n1.to_s).to eq("ValorNodo1")
+            expect(@n2.to_s).to eq("ValorNodo2")
         end
         
         it "El nodo devuelve el siguiente nodo" do
             @n1.next = @n2
             expect(@n1.next).to be(@n2)
-            expect(@n1.next.to_s).to be("ValorNodo2")
+            expect(@n1.next.to_s).to eq("ValorNodo2")
         end
       
     end
