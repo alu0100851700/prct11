@@ -52,7 +52,7 @@ describe BiblioGem::List do
         end
     end
     
-    it "Pruebas lista doblemente enlazada" do
+    describe "Pruebas lista doblemente enlazada" do
         before :each do
             @l = BiblioGem::List.new("Dato1","Dato2","Dato3")
         end
@@ -66,7 +66,7 @@ describe BiblioGem::List do
         end
         
         it "Se puede insertar un elemento por la cabeza" do
-            @l.push_font("Dato4")
+            @l.push_front("Dato4")
             
             expect(@l.pop).to eq("Dato4")
         end
