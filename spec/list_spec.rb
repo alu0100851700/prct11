@@ -65,10 +65,10 @@ describe BiblioGem::List do
             expect(@l.pop_back).to eq("Dato3")
         end
         
-        it "Se puede insertar un elemento por la cola" do
-            @l.push_back("Dato4")
+        it "Se puede insertar un elemento por la cabeza" do
+            @l.push_font("Dato4")
             
-            expect(@l.pop_back).to eq("Dato4")
+            expect(@l.pop).to eq("Dato4")
         end
     end
     
