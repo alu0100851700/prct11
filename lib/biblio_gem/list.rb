@@ -5,11 +5,11 @@ module BiblioGem
 		def initialize(*args)
 			@head = @tail = nil
 			@size = 0
-			self.push(*args) if(args!=nil)
+			self.push_back(*args) if(args!=nil)
 			
 		end
 		
-		def push(*args)
+		def push_back(*args)
 			args.each do |value|
 				if(@tail==nil)									#La cola esta vacia
 					@tail = @head = Node.new(:value => value)
@@ -33,7 +33,7 @@ module BiblioGem
 			end
 		end
 		
-		def pop
+		def pop_front
 			return false if @size==0
 			pos = @head
 			@head = pos.next

@@ -68,7 +68,7 @@ describe BiblioGem::List do
         it "Se puede insertar un elemento por la cabeza" do
             @l.push_front("Dato4")
             
-            expect(@l.pop).to eq("Dato4")
+            expect(@l.pop_front).to eq("Dato4")
         end
     end
     
