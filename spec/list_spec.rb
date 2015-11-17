@@ -13,17 +13,17 @@ describe BiblioGem::List do
         end
         
         it "Se extrae el primer elemento de la lista" do
-            expect(@l.pop).to eq("Dato1")
+            expect(@l.pop_front).to eq("Dato1")
         end
         
         it "Se puede insertar un elemento" do
-            @l.push("Dato4")
+            @l.push_back("Dato4")
             
             expect(@l.size).to eq(4)
         end
         
         it "Se pueden insertar varios elementos" do
-            @l.push("Dato4","Dato5","Dato6")
+            @l.push_back("Dato4","Dato5","Dato6")
             
             expect(@l.size).to eq(6)
         end
@@ -44,11 +44,11 @@ describe BiblioGem::List do
         end
         
         it "Los libros son accedidos correctamente" do
-            expect(@l.pop).to be(@libro1)
-            expect(@l.pop).to be(@libro2)
-            expect(@l.pop).to be(@libro3)
-            expect(@l.pop).to be(@libro4)
-            expect(@l.pop).to be(@libro5)
+            expect(@l.pop_front).to be(@libro1)
+            expect(@l.pop_front).to be(@libro2)
+            expect(@l.pop_front).to be(@libro3)
+            expect(@l.pop_front).to be(@libro4)
+            expect(@l.pop_front).to be(@libro5)
         end
     end
     
