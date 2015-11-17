@@ -71,5 +71,4 @@ describe BiblioGem::List do
             expect(@l.pop_front).to eq("Dato4")
         end
     end
-    
 end
