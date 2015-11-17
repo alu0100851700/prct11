@@ -1,7 +1,7 @@
 module BiblioGem
     Node = Struct.new(:value, :next) do
         
-        attr_accessor :value, :next
+        attr_accessor :value, :next, :prev
         
         def initialize(args)
             @value = args[:value]
