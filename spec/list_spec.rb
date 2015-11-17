@@ -52,4 +52,24 @@ describe BiblioGem::List do
         end
     end
     
+    it "Pruebas lista doblemente enlazada" do
+        before :each do
+            @l = BiblioGem::List.new("Dato1","Dato2","Dato3")
+        end
+        
+        it "Debe existir la cola de una lista" do
+            expect(@l.tail).not_to be(nil)
+        end
+        
+        it "Se extrae el ultimo elemento de la lista" do
+            expect(@l.pop_back).to eq("Dato3")
+        end
+        
+        it "Se puede insertar un elemento por la cola" do
+            @l.push_back("Dato4")
+            
+            expect(@l.pop_back).to eq("Dato4")
+        end
+    end
+    
 end
