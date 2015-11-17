@@ -21,7 +21,7 @@ describe BiblioGem::Node do
         end
         
         it "EL nodo devuelve el nodo anterior" do
-            @n1.next = @n2
+            @n2.prev = @n1
             expect(@n2.prev).to be(@n1)
             expect(@n2.prev.to_s).to eq("ValorNodo1")
         end
