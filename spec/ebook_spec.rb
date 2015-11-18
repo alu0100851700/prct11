@@ -2,7 +2,7 @@
 require 'spec_helper'
 require 'biblio_gem'
 
-describe EBook do
+describe BiblioGem::EBook do
     describe "Pruebas EBook" do
         before :each do
             @eb = BiblioGem::EBook.new(["Autor1","Autor2"],"Titulo","Fecha",["ISBN1","ISBN2"])

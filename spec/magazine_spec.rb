@@ -2,7 +2,7 @@
 require 'spec_helper'
 require 'biblio_gem'
 
-describe Magazine do
+describe BiblioGem::Magazine do
     describe "Pruebas Magazine" do
         before :each do
             @m = BiblioGem::Magazine.new(["Autor1","Autor2"],"Titulo","Fecha",["ISBN1","ISBN2"])
