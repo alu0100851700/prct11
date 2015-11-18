@@ -13,7 +13,7 @@ describe BiblioGem::Magazine do
         end
         
         it "Las revistas se muestran de forma correcta" do
-            expect(@b.to_s).to eq("Revista\nAutor/es: Autor1, Autor2\n Titulo: Titulo\n Fecha: Fecha\n ISBN: ISBN1, ISBN2\n")
+            expect(@m.to_s).to eq("Revista\nAutor/es: Autor1, Autor2\n Titulo: Titulo\n Fecha: Fecha\n ISBN: ISBN1, ISBN2\n")
         end
     
     end
