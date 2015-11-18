@@ -12,5 +12,9 @@ describe BiblioGem::Book do
             expect(@b.is_a? BiblioGem::Bibliography).to be true
         end
         
+        it "Los libros se muestran de forma correcta" do
+            expect(@b.to_s).to eq("Libro\nAutor/es: Autor1, Autor2\n Titulo: Titulo\n Fecha: Fecha\n ISBN: ISBN1, ISBN2\n")
+        end
+        
     end
 end

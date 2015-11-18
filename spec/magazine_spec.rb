@@ -8,8 +8,12 @@ describe BiblioGem::Magazine do
             @m = BiblioGem::Magazine.new(["Autor1","Autor2"],"Titulo","Fecha",["ISBN1","ISBN2"])
         end
       
-        it "Los libros son un recurso bibliográfico" do
+        it "Las revistas son un recurso bibliográfico" do
             expect(@m.is_a? BiblioGem::Bibliography).to be true
+        end
+        
+        it "Las revistas se muestran de forma correcta" do
+            expect(@b.to_s).to eq("Revista\nAutor/es: Autor1, Autor2\n Titulo: Titulo\n Fecha: Fecha\n ISBN: ISBN1, ISBN2\n")
         end
     
     end
