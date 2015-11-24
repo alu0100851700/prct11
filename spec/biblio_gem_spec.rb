@@ -10,7 +10,7 @@ describe BiblioGem do
 
    describe "Almacenamiento de datos (1 autor):" do
       before :each do
-        @bib1 = BiblioGem::Bibliography.new("Autor1","Titulo1","Fecha1","ISBN1")
+        @bib1 = BiblioGem::Bibliography.new(autor: "Autor1", titulo: "Titulo1", fecha: "Fecha1", isbn: "ISBN1")
       end
 
       it "El nombre del autor es correcto" do
@@ -32,7 +32,7 @@ describe BiblioGem do
    
    describe "Almacenamiento de datos (2 autores):" do
       before :each do
-         @bib2 = BiblioGem::Bibliography.new(["Autor1","Autor2"],"Titulo2","Fecha2","ISBN2")
+         @bib2 = BiblioGem::Bibliography.new(autor: ["Autor1", "Autor2"], titulo: "Titulo1", fecha: "Fecha1", isbn: "ISBN1")
       end
       
       it "El nombre de ambos autores son correctos" do
@@ -40,22 +40,22 @@ describe BiblioGem do
       end
       
       it "El título del libro es correcto" do
-         @bib2.titulo.should eq("Titulo2")
+         @bib2.titulo.should eq("Titulo1")
       end
 
       it "La fecha del libro es correcta" do
-         @bib2.fecha.should eq("Fecha2")
+         @bib2.fecha.should eq("Fecha1")
       end
 
       it "ISBN correcto" do
-         @bib2.isbn.should eq("ISBN2")
+         @bib2.isbn.should eq("ISBN1")
       end
    end
    
    describe "Imprimiendo datos" do
       before :each do
-         @bib1 = BiblioGem::Bibliography.new("Autor1","Titulo1","Fecha1","ISBN1")
-         @bib2 = BiblioGem::Bibliography.new(["Autor1","Autor2"],"Titulo2","Fecha2","ISBN2")
+         @bib1 = BiblioGem::Bibliography.new(autor: "Autor1", titulo: "Titulo1", fecha: "Fecha1", isbn: "ISBN1")
+         @bib2 = BiblioGem::Bibliography.new(autor: ["Autor1","Autor2"], titulo: "Titulo2", fecha: "Fecha2", isbn: "ISBN2")
       end
        
       it "Imprimiendo datos 1" do
@@ -66,5 +66,4 @@ describe BiblioGem do
          @bib2.to_s.should eq("Autor/es: Autor1, Autor2\n Titulo: Titulo2\n Fecha: Fecha2\n ISBN: ISBN2\n")
       end
    end
-   
 end
