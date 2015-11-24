@@ -71,4 +71,36 @@ describe BiblioGem::List do
             expect(@l.pop_front).to eq("Dato4")
         end
     end
+    
+    describe "Expectativas Enumerable" do
+        before :each do
+            @l = BiblioGem::List.new("Dato2","Dato1","Dato3")
+        end
+        
+        it "Comprobando metodo any?" do
+            expect(@l.any?{|dato| dato=="Dato2"}).to eq(true)
+            expect(@l.any?{|dato| dato=="Dato4"}).to eq(false)
+        end
+        
+        it "comprobrando el metodo count" do
+            expect(@l.count).to eq(3)
+        end
+        
+        it "comprobrando drop" do
+            expect(@l.drop("Dato2")).to eq(["Dato2"])
+        end
+        
+        it "comprobrando max" do
+            expect(@l.max).to eq("Dato3")
+        end
+        
+        it "comprobrando min" do
+            expect(@l.min).to eq("Dato1")
+        end
+        
+        it "comprobrando sort" do
+            expect(@l.sort).to eq(["Dato1","Dato2","Dato3"])
+        end
+        
+    end
 end
