@@ -2,8 +2,11 @@ module BiblioGem
 	class Bibliography
 		attr_accessor :autor, :titulo, :fecha, :isbn
 
-		def initialize (autor, titulo, fecha, isbn)
-			@autor, @titulo, @fecha, @isbn = autor, titulo, fecha, isbn
+		def initialize (args)
+			@autor = args[:autor]
+			@titulo = args[:titulo]
+			@fecha = args[:fecha]
+			@isbn = args[:isbn]
 		end
 
 		def to_s
