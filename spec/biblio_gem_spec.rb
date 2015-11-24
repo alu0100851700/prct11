@@ -66,4 +66,48 @@ describe BiblioGem do
          @bib2.to_s.should eq("Autor/es: Autor1, Autor2\n Titulo: Titulo2\n Fecha: Fecha2\n ISBN: ISBN2\n")
       end
    end
+   
+   describe "Los libros pueden indicar el número de páginas" do
+      before :each do
+         @bib1 = BiblioGem::Bibliography.new(titulo: "Titulo1", paginas:342)
+         @bib2 = BiblioGem::Bibliography.new(titulo: "Titulo2", paginas:275)
+         @bib3 = BiblioGem::Bibliography.new(titulo: "Titulo3", paginas:342)
+         @bib3 = BiblioGem::Bibliography.new(titulo: "Titulo3") #No se indica el número de página
+      end
+      
+      it "El libro indica el número de páginas que tiene" do
+         expect(@bib1.paginas).to eq(342)
+         expect(@bib2.paginas).to eq(275)
+         expect(@bib3.paginas).to eq(342)
+         expect(@bib4.paginas).to eq(nil)
+      end
+      
+      it "Se puede comparar el tamaño de los libros" do
+         expect(@bib1> @bib2).to eq(true)
+         expect(@bib1>=@bib2).to eq(true)
+         expect(@bib1< @bib2).to eq(false)
+         expect(@bib1<=@bib2).to eq(false)
+         expect(@bib1==@bib2).to eq(false)
+         expect(@bib1!=@bib2).to eq(true)
+         
+         expect(@bib2> @bib1).to eq(false)
+         expect(@bib2>=@bib1).to eq(false)
+         expect(@bib2< @bib1).to eq(true)
+         expect(@bib2<=@bib1).to eq(true)
+         
+         expect(@bib1> @bib3).to eq(false)
+         expect(@bib1>=@bib3).to eq(true)
+         expect(@bib1< @bib3).to eq(false)
+         expect(@bib1<=@bib3).to eq(true)
+         expect(@bib1==@bib3).to eq(true)
+         expect(@bib1!=@bib3).to eq(false)
+         
+         expect(@bib1> @bib4).to eq(nil)
+         expect(@bib1>=@bib4).to eq(nil)
+         expect(@bib1< @bib4).to eq(nil)
+         expect(@bib1<=@bib4).to eq(nil)
+         expect(@bib1==@bib4).to eq(nil)
+         expect(@bib1!=@bib4).to eq(nil)
+      end
+   end
 end
