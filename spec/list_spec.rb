@@ -31,11 +31,11 @@ describe BiblioGem::List do
     
     describe "Pruebas lista con Libros" do
         before :each do
-            @libro1 = BiblioGem::Bibliography.new(["Dave Thomas","Andy Hunt","Chad Fowler"]," Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide. (The Facets of Ruby)","(July 7, 2013",["978-1937785499","1937785491"])
-            @libro2 = BiblioGem::Bibliography.new("Scott Chacon"," Pro Git 2009th Edition. (Pro). Apress","August 27, 2009",["978-1430218333","1430218339"])
-            @libro3 = BiblioGem::Bibliography.new(["David Flanagan","Yukihiro Matsumoto"],"The Ruby Programming Language. O’Reilly Media","February 4, 2008",["0596516177","978-0596516178"])
-            @libro4 = BiblioGem::Bibliography.new(["David Chelimsky","Dave Astels","Bryan Helmkamp","Dan North","Zach Dennis","Aslak Hellesoy"],"The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends (The Facets of Ruby). PragmaticBookshelf","December 25, 2010",["1934356379","978-1934356371"])
-            @libro5 = BiblioGem::Bibliography.new("Richard E"," . Silverman Git Pocket Guide O’Reilly Media","August 2, 2013",["1449325866","978-1449325862"])
+            @libro1 = BiblioGem::Bibliography.new(autor:["Dave Thomas","Andy Hunt","Chad Fowler"], titulo:" Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide. (The Facets of Ruby)", fecha:"July 7, 2013", isbn:["978-1937785499","1937785491"])
+            @libro2 = BiblioGem::Bibliography.new(autor:"Scott Chacon", titulo:" Pro Git 2009th Edition. (Pro). Apress", fecha:"August 27, 2009", isbn:["978-1430218333","1430218339"])
+            @libro3 = BiblioGem::Bibliography.new(autor:["David Flanagan","Yukihiro Matsumoto"], titulo:"The Ruby Programming Language. O’Reilly Media", fecha:"February 4, 2008", isbn:["0596516177","978-0596516178"])
+            @libro4 = BiblioGem::Bibliography.new(autor:["David Chelimsky","Dave Astels","Bryan Helmkamp","Dan North","Zach Dennis","Aslak Hellesoy"],titulo:"The RSpec Book: Behaviour Driven Development with RSpec, Cucumber, and Friends (The Facets of Ruby). PragmaticBookshelf", fecha:"December 25, 2010", isbn:["1934356379","978-1934356371"])
+            @libro5 = BiblioGem::Bibliography.new(autor:"Richard E", titulo:" . Silverman Git Pocket Guide O’Reilly Media", fecha:"August 2, 2013", isbn:["1449325866","978-1449325862"])
             @l = BiblioGem::List.new(@libro1,@libro2,@libro3,@libro4,@libro5)
         end
         

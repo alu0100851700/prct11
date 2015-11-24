@@ -5,7 +5,7 @@ require 'biblio_gem'
 describe BiblioGem::Book do
     describe "Pruebas Book" do
         before :each do
-            @b = BiblioGem::Book.new(["Autor1","Autor2"],"Titulo","Fecha",["ISBN1","ISBN2"])
+            @b = BiblioGem::Book.new(autor:["Autor1","Autor2"], titulo:"Titulo", fecha:"Fecha", isbn:["ISBN1","ISBN2"])
         end
       
         it "Los libros son un recurso bibliográfico" do

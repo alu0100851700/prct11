@@ -5,7 +5,7 @@ require 'biblio_gem'
 describe BiblioGem::EBook do
     describe "Pruebas EBook" do
         before :each do
-            @eb = BiblioGem::EBook.new(["Autor1","Autor2"],"Titulo","Fecha",["ISBN1","ISBN2"])
+            @eb = BiblioGem::EBook.new(autor:["Autor1","Autor2"], titulo:"Titulo", fecha:"Fecha", isbn:["ISBN1","ISBN2"])
         end
       
         it "Los libros electronicos son un recurso bibliográfico" do
