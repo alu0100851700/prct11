@@ -69,10 +69,10 @@ describe BiblioGem do
    
    describe "Los libros pueden indicar el número de páginas" do
       before :each do
-         @bib1 = BiblioGem::Bibliography.new(titulo: "Titulo1", paginas:342)
-         @bib2 = BiblioGem::Bibliography.new(titulo: "Titulo2", paginas:275)
-         @bib3 = BiblioGem::Bibliography.new(titulo: "Titulo3", paginas:342)
-         @bib3 = BiblioGem::Bibliography.new(titulo: "Titulo3") #No se indica el número de página
+         @bib1 = BiblioGem::Bibliography.new(titulo: "Titulo1", paginas: 342)
+         @bib2 = BiblioGem::Bibliography.new(titulo: "Titulo2", paginas: 275)
+         @bib3 = BiblioGem::Bibliography.new(titulo: "Titulo3", paginas: 342)
+         @bib4 = BiblioGem::Bibliography.new(titulo: "Titulo3") #No se indica el número de página
       end
       
       it "El libro indica el número de páginas que tiene" do
@@ -102,12 +102,6 @@ describe BiblioGem do
          expect(@bib1==@bib3).to eq(true)
          expect(@bib1!=@bib3).to eq(false)
          
-         expect(@bib1> @bib4).to eq(nil)
-         expect(@bib1>=@bib4).to eq(nil)
-         expect(@bib1< @bib4).to eq(nil)
-         expect(@bib1<=@bib4).to eq(nil)
-         expect(@bib1==@bib4).to eq(nil)
-         expect(@bib1!=@bib4).to eq(nil)
       end
    end
 end
