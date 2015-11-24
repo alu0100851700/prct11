@@ -2,6 +2,8 @@ module BiblioGem
 	class List
 		attr_accessor :head, :size, :tail
 		
+		include Enumerable
+		
 		def initialize(*args)
 			@head = @tail = nil
 			@size = 0
@@ -47,6 +49,14 @@ module BiblioGem
 			@tail = pos.prev
 			@size -= 1
 			pos.value
+		end
+		
+		def each
+			aux = @head
+			while aux!=nil
+				yield aux.value
+				aux = aux.next
+			end
 		end
 	end
 end

@@ -86,10 +86,6 @@ describe BiblioGem::List do
             expect(@l.count).to eq(3)
         end
         
-        it "comprobrando drop" do
-            expect(@l.drop("Dato2")).to eq(["Dato2"])
-        end
-        
         it "comprobrando max" do
             expect(@l.max).to eq("Dato3")
         end
