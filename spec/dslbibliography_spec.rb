@@ -7,24 +7,24 @@ describe BiblioGem::DSLBibliography do
     describe "Pruebas de la clase DSL Bibliography" do
         before :each do
             @book = BiblioGem::DSLBibliography.new do 
-                Title "Ethical Dilemmas in Fertility Counseling",
-                By: "Judith E. Horowitz, Joann Paley Galst and Nanette Elster",
-                Pages: 242,
-                ISBN: "978-1-4338-0760-2",
-                Copyright: 2010,
-                Format: "Hardcover",
-                Availability: "In Stock"
+                title "Ethical Dilemmas in Fertility Counseling",
+                by: "Judith E. Horowitz, Joann Paley Galst and Nanette Elster",
+                pages: 242,
+                isbn: "978-1-4338-0760-2",
+                copyright: 2010,
+                format: "Hardcover",
+                availability: "In Stock"
             end
         end
-        
-        it "El libro tiene autor/autores" do
-            expect(@book.autores).should eq ["Judith E. Horowitz","Joann Paley Galst" "Nanette Elster"]
-        end
-        
-        it "El libro tiene un titulo" do
+         it "E
+         l libro tiene un titulo" do
             expect(@book.titulo).should eq "Ethical Dilemmas in Fertility Counseling"
         end
         
+        it "El libro tiene autor/autores" do
+            expect(@book.autor).should eq ["Judith E. Horowitz","Joann Paley Galst","Nanette Elster"]
+        end
+       
         it "El libro contiene el número de páginas" do
             expect(@book.paginas).should eq 242
         end
