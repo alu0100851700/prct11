@@ -11,9 +11,11 @@ task :spec do
   sh "bundle exec rspec spec/ebook_spec.rb"
   sh "bundle exec rspec spec/magazine_spec.rb"
   sh "bundle exec rspec spec/dslbibliography_spec.rb"
+  sh "bundle exec rspec spec/DSL_spec.rb"
 end
 
-desc "Ejecutar las espectativas de la clase DSLBibliography"
+desc "Ejecutar las expectativas de la clase DSL"
 task :prct11 do
   sh "bundle exec rspec spec/dslbibliography_spec.rb"
+  sh "bundle exec rspec spec/DSL_spec.rb"
 end
