@@ -6,6 +6,8 @@ require "biblio_gem/book"
 require "biblio_gem/ebook"
 require "biblio_gem/magazine"
 require "biblio_gem/dslbibliography"
+require "biblio_gem/dsl"
+
 
 module BiblioGem
   # Your code goes here...
