@@ -16,5 +16,9 @@ module BiblioGem
             @disponibilidad =  options[:availability] if options[:availability]
             @fecha =  options[:date] if options[:date]
         end
+        
+        def to_s
+            "\nTitle: #{@titulo}\nBy: #{@autor.join(", ")}\nPages: #{@paginas}\nISBN: #{@isbn}\nCopyright: #{@copyright}\nFormat: #{@formato}\nAvailability: #{@disponibilidad}\n"
+        end
 	end
 end

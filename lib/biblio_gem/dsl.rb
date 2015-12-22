@@ -17,5 +17,11 @@ module BiblioGem
         def numref
             @bibliography.length
         end
+        
+        def to_s
+            salida = ""
+            @bibliography.each { |bib| salida << bib.to_s}
+            salida
+        end
     end
 end
